@@ -1,0 +1,139 @@
+/* General Reset */
+body, h1, p, ul, li, a {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Arial', sans-serif;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-color: #e9ecef;
+    --container-bg: #ffffff;
+    --text-color: #333;
+    --button-bg: #007bff;
+    --button-hover-bg: #0056b3;
+    --button-text: #ffffff;
+}
+
+[data-theme="dark"] {
+    --bg-color: #333;
+    --container-bg: #444;
+    --text-color: #ddd;
+    --button-bg: #0069d9;
+    --button-hover-bg: #004080;
+    --button-text: #ffffff;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-size: 16px;
+    line-height: 1.5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+/* Center Container Styling */
+.container {
+    background-color: var(--container-bg);
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 700px;
+    width: 100%;
+    text-align: center;
+    transition: background-color 0.5s ease;
+}
+
+/* Header */
+h1 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+h3 {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+/* Slogan or Intro Text */
+p {
+    font-size: 14px;
+    margin-bottom: 20px;
+    color: var(--text-color);
+    transition: color 0.5s ease;
+}
+
+/* Bullet Items Style */
+ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    padding: 0;
+    max-width: 550px;
+}
+
+li {
+    margin-bottom: 15px;
+    text-align: center;
+    width: 100%;  /* Full width of the parent */
+}
+
+/* Rounded Button Style for Links */
+li a {
+    display: inline-block;
+    background-color: var(--button-bg);
+    color: var(--button-text);
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    width: 100%;  /* Set width to 100% to match parent */
+    max-width: 300px; /* Adjust this value based on the widest button text */
+    box-sizing: border-box;  /* Ensure padding doesn't affect the total width */
+}
+
+li a:hover {
+    background-color: var(--button-hover-bg);
+}
+
+/* Ensure that the buttons remain centered */
+li {
+    display: flex;  /* Use flexbox to center content */
+    justify-content: center; /* Center horizontally within the li */
+}
+
+/* Theme Switcher Styles */
+.theme-switcher {
+    margin-top: 20px;
+}
+
+.theme-switcher button {
+    background-color: var(--button-bg);
+    border: none;
+    color: var(--button-text);
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 25px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.theme-switcher button:hover {
+    background-color: var(--button-hover-bg);
+}
