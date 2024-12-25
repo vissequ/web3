@@ -1,0 +1,164 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+
+
+
+/* Text field active state in dark theme */
+.dark-theme input[type="text"]:focus {
+    background-color: #fff;
+    color: #000;
+}
+
+
+h1 {
+    text-align: center;
+}
+
+#walletAddress {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #333;
+}
+
+h4 {
+   text-align: center;
+}
+
+button {
+    padding: 10px 20px;
+    margin: 5px 0;
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+input[type="text"] {
+    width: calc(100% - 120px);
+    padding: 10px;
+    margin-top: 10px;
+    margin-right: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+#posts {
+    margin-top: 20px;
+}
+
+/* Post Styles */
+.post {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.post h3 {
+    margin: 0 0 10px 0;
+}
+
+.post p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+/* Comment Styles */
+.comment {
+    margin-left: 20px; /* Indent comments */
+    padding-left: 10px;
+    border-left: 2px solid #ddd;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.comment p {
+    margin: 5px 0;
+}
+
+.view-more-comments-button {
+    margin: 10px 0;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.view-more-comments-button:hover {
+    background-color: #0056b3;
+}
+
+.comment button {
+    font-size: 12px;
+}
+
+.comment strong {
+    color: #007bff;
+}
+
+/* Theme Variables (Light Theme) */
+:root {
+    --background-color: #f9f9f9;
+    --text-color: #333;
+    --button-bg-color: #007bff;
+    --button-hover-bg-color: #0056b3;
+    --input-bg-color: #fff;
+    --border-color: #ddd;
+}
+
+/* Dark Theme Variables */
+.dark-theme {
+    --background-color: #1e1e1e;
+    --text-color: #e0e0e0;
+    --button-bg-color: #444;
+    --button-hover-bg-color: #666;
+    --input-bg-color: #333;
+    --border-color: #555;
+}
+
+/* Apply Theme Variables */
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+button {
+    background-color: var(--button-bg-color);
+}
+
+button:hover {
+    background-color: var(--button-hover-bg-color);
+}
+
+input[type="text"] {
+    background-color: var(--input-bg-color);
+    border: 1px solid var(--border-color);
+}
+
+.post {
+    background-color: var(--input-bg-color);
+    border: 1px solid var(--border-color);
+}
+
+.comment {
+    border-left: 2px solid var(--border-color);
+}

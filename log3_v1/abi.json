@@ -1,0 +1,400 @@
+{
+	"anonymous": false,
+	"inputs": [
+		{
+			"indexed": false,
+			"internalType": "uint256",
+			"name": "id",
+			"type": "uint256"
+		},
+		{
+			"indexed": false,
+			"internalType": "uint256",
+			"name": "postId",
+			"type": "uint256"
+		},
+		{
+			"indexed": false,
+			"internalType": "string",
+			"name": "message",
+			"type": "string"
+		},
+		{
+			"indexed": false,
+			"internalType": "address",
+			"name": "creator",
+			"type": "address"
+		},
+		{
+			"indexed": false,
+			"internalType": "uint256",
+			"name": "timestamp",
+			"type": "uint256"
+		}
+	],
+	"name": "CommentCreated",
+	"type": "event"
+},
+{
+	"anonymous": false,
+	"inputs": [
+		{
+			"indexed": false,
+			"internalType": "uint256",
+			"name": "commentId",
+			"type": "uint256"
+		},
+		{
+			"indexed": false,
+			"internalType": "address",
+			"name": "liker",
+			"type": "address"
+		},
+		{
+			"indexed": false,
+			"internalType": "bool",
+			"name": "liked",
+			"type": "bool"
+		}
+	],
+	"name": "CommentLiked",
+	"type": "event"
+},
+{
+	"inputs": [
+		{
+			"internalType": "uint256",
+			"name": "_postId",
+			"type": "uint256"
+		},
+		{
+			"internalType": "string",
+			"name": "_message",
+			"type": "string"
+		}
+	],
+	"name": "createComment",
+	"outputs": [],
+	"stateMutability": "nonpayable",
+	"type": "function"
+},
+{
+	"inputs": [
+		{
+			"internalType": "string",
+			"name": "_message",
+			"type": "string"
+		}
+	],
+	"name": "createPost",
+	"outputs": [],
+	"stateMutability": "nonpayable",
+	"type": "function"
+},
+{
+	"inputs": [
+		{
+			"internalType": "uint256",
+			"name": "_commentId",
+			"type": "uint256"
+		},
+		{
+			"internalType": "bool",
+			"name": "_like",
+			"type": "bool"
+		}
+	],
+	"name": "likeComment",
+	"outputs": [],
+	"stateMutability": "nonpayable",
+	"type": "function"
+},
+{
+	"inputs": [
+		{
+			"internalType": "uint256",
+			"name": "_postId",
+			"type": "uint256"
+		},
+		{
+			"internalType": "bool",
+			"name": "_like",
+			"type": "bool"
+		}
+	],
+	"name": "likePost",
+	"outputs": [],
+	"stateMutability": "nonpayable",
+	"type": "function"
+},
+{
+	"anonymous": false,
+	"inputs": [
+		{
+			"indexed": false,
+			"internalType": "uint256",
+			"name": "id",
+			"type": "uint256"
+		},
+		{
+			"indexed": false,
+			"internalType": "string",
+			"name": "message",
+			"type": "string"
+		},
+		{
+			"indexed": false,
+			"internalType": "address",
+			"name": "creator",
+			"type": "address"
+		},
+		{
+			"indexed": false,
+			"internalType": "uint256",
+			"name": "timestamp",
+			"type": "uint256"
+		}
+	],
+	"name": "PostCreated",
+	"type": "event"
+},
+{
+	"anonymous": false,
+	"inputs": [
+		{
+			"indexed": false,
+			"internalType": "uint256",
+			"name": "postId",
+			"type": "uint256"
+		},
+		{
+			"indexed": false,
+			"internalType": "address",
+			"name": "liker",
+			"type": "address"
+		},
+		{
+			"indexed": false,
+			"internalType": "bool",
+			"name": "liked",
+			"type": "bool"
+		}
+	],
+	"name": "PostLiked",
+	"type": "event"
+},
+{
+	"inputs": [],
+	"name": "commentCount",
+	"outputs": [
+		{
+			"internalType": "uint256",
+			"name": "",
+			"type": "uint256"
+		}
+	],
+	"stateMutability": "view",
+	"type": "function"
+},
+{
+	"inputs": [
+		{
+			"internalType": "uint256",
+			"name": "",
+			"type": "uint256"
+		}
+	],
+	"name": "comments",
+	"outputs": [
+		{
+			"internalType": "uint256",
+			"name": "id",
+			"type": "uint256"
+		},
+		{
+			"internalType": "uint256",
+			"name": "postId",
+			"type": "uint256"
+		},
+		{
+			"internalType": "string",
+			"name": "message",
+			"type": "string"
+		},
+		{
+			"internalType": "address",
+			"name": "creator",
+			"type": "address"
+		},
+		{
+			"internalType": "uint256",
+			"name": "timestamp",
+			"type": "uint256"
+		},
+		{
+			"internalType": "uint256",
+			"name": "likes",
+			"type": "uint256"
+		},
+		{
+			"internalType": "uint256",
+			"name": "dislikes",
+			"type": "uint256"
+		}
+	],
+	"stateMutability": "view",
+	"type": "function"
+},
+{
+	"inputs": [
+		{
+			"internalType": "uint256",
+			"name": "",
+			"type": "uint256"
+		},
+		{
+			"internalType": "address",
+			"name": "",
+			"type": "address"
+		}
+	],
+	"name": "hasDislikedComment",
+	"outputs": [
+		{
+			"internalType": "bool",
+			"name": "",
+			"type": "bool"
+		}
+	],
+	"stateMutability": "view",
+	"type": "function"
+},
+{
+	"inputs": [
+		{
+			"internalType": "uint256",
+			"name": "",
+			"type": "uint256"
+		},
+		{
+			"internalType": "address",
+			"name": "",
+			"type": "address"
+		}
+	],
+	"name": "hasDislikedPost",
+	"outputs": [
+		{
+			"internalType": "bool",
+			"name": "",
+			"type": "bool"
+		}
+	],
+	"stateMutability": "view",
+	"type": "function"
+},
+{
+	"inputs": [
+		{
+			"internalType": "uint256",
+			"name": "",
+			"type": "uint256"
+		},
+		{
+			"internalType": "address",
+			"name": "",
+			"type": "address"
+		}
+	],
+	"name": "hasLikedComment",
+	"outputs": [
+		{
+			"internalType": "bool",
+			"name": "",
+			"type": "bool"
+		}
+	],
+	"stateMutability": "view",
+	"type": "function"
+},
+{
+	"inputs": [
+		{
+			"internalType": "uint256",
+			"name": "",
+			"type": "uint256"
+		},
+		{
+			"internalType": "address",
+			"name": "",
+			"type": "address"
+		}
+	],
+	"name": "hasLikedPost",
+	"outputs": [
+		{
+			"internalType": "bool",
+			"name": "",
+			"type": "bool"
+		}
+	],
+	"stateMutability": "view",
+	"type": "function"
+},
+{
+	"inputs": [],
+	"name": "postCount",
+	"outputs": [
+		{
+			"internalType": "uint256",
+			"name": "",
+			"type": "uint256"
+		}
+	],
+	"stateMutability": "view",
+	"type": "function"
+},
+{
+	"inputs": [
+		{
+			"internalType": "uint256",
+			"name": "",
+			"type": "uint256"
+		}
+	],
+	"name": "posts",
+	"outputs": [
+		{
+			"internalType": "uint256",
+			"name": "id",
+			"type": "uint256"
+		},
+		{
+			"internalType": "string",
+			"name": "message",
+			"type": "string"
+		},
+		{
+			"internalType": "address",
+			"name": "creator",
+			"type": "address"
+		},
+		{
+			"internalType": "uint256",
+			"name": "timestamp",
+			"type": "uint256"
+		},
+		{
+			"internalType": "uint256",
+			"name": "likes",
+			"type": "uint256"
+		},
+		{
+			"internalType": "uint256",
+			"name": "dislikes",
+			"type": "uint256"
+		}
+	],
+	"stateMutability": "view",
+	"type": "function"
+}

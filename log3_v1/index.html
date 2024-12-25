@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log3 Board</title>
+    <!-- External Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/ethers@5.7.2/dist/ethers.umd.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Log3 Board</h1>
+    <h4><em>All posts are immutable and reside on the Polygon blockchain</em></h4>
+
+    <p id="zulu-time">Loading...</p>
+
+    <!-- Theme Toggle -->
+    <div style="text-align: center; margin-bottom: 10px;">
+        <button id="lightThemeButton">Light Theme</button>
+        <button id="darkThemeButton">Dark Theme</button>
+    </div>
+
+
+    <p align="center">Contract Address: <a href="https://polygonscan.com/address/0xE7bD100E131a392a1Db25d7191891100f4df74B3" target="_blank">0xE7bD100E131a392a1Db25d7191891100f4df74B3</a></p>
+
+    <!-- Wallet Connection -->
+    <button id="connectWallet">Connect Wallet</button>
+    <p id="walletAddress"></p>
+
+    <!-- Loading Modal -->
+    <div id="loadingModal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); z-index: 1000; justify-content: center; align-items: center;">
+        <div style="background-color: white; padding: 20px; border-radius: 10px; text-align: center; width: 200px;">
+            <div style="border: 5px solid #f3f3f3; border-top: 5px solid #007bff; border-radius: 50%; width: 50px; height: 50px; animation: spin 1s linear infinite; margin: 0 auto;"></div>
+            <p style="margin-top: 10px; font-size: 16px;">Please wait...</p>
+        </div>
+    </div>
+
+
+    <div id="createPostForm" style="margin-bottom: 20px;">
+        <h3>Create a Post</h3>
+        <textarea id="postMessage" placeholder="What's on your mind?" rows="4" style="resize: none; width: calc(100% - 120px); padding: 10px; border: 1px solid #ddd; border-radius: 5px;"></textarea>
+        <br><br><br><button id="createPostButton" style="margin-top: 10px;">LOG</button>
+    </div>    
+
+    <!-- Posts Section -->
+    <div id="posts"></div>
+
+    <hr style="border: 1px solid #ccc; margin: 20px 0;"> <!-- Horizontal bar -->
+
+    <p><em>Alpha Version 0.0.0.7</em></p>
+
+    <script src="app.js"></script>
+</body>
+</html>
